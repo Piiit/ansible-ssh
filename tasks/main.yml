@@ -1,0 +1,7 @@
+---
+- name: Not permitting root login
+  ansible.builtin.lineinfile:
+    dest: /etc/ssh/sshd_config
+    regexp: '^#?PermitRootLogin (no|yes)'
+    line: 'PermitRootLogin no'
+    backrefs: yes
