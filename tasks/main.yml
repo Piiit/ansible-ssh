@@ -5,3 +5,8 @@
     regexp: '^#?PermitRootLogin (no|yes)'
     line: 'PermitRootLogin no'
     backrefs: yes
+
+- name: Reload SSH service
+  ansible.builtin.systemd:
+    name: ssh
+    state: reloaded
