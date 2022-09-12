@@ -7,8 +7,9 @@ SSH configuration role.
 
 ```yaml
 - hosts: all
-  roles:
-    - role: ansible-ssh
+  tasks:
+    - ansible.builtin.include_role:
+        name: ansible-ssh
 ```
 
 ## Versioning
